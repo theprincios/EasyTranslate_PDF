@@ -1,16 +1,29 @@
-# flutter_traslate_pdf
+# flutter_translate_pdf
 
-A new Flutter project.
+EasyTranslate_PDF è un’app Flutter open-source che permette di tradurre documenti PDF da una lingua all'altra.  
 
-## Getting Started
+## Descrizione
 
-This project is a starting point for a Flutter application.
+Questo progetto nasce dall’esigenza di avere uno strumento gratuito e senza registrazioni per tradurre PDF, utilizzando uno script Python per l’elaborazione e una semplice interfaccia Flutter per l’interazione con l’utente.
 
-A few resources to get you started if this is your first Flutter project:
+## Caratteristiche
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Traduzione automatica di file PDF
+- Python per la gestione della traduzione  
+- Frontend Flutter semplice e intuitivo  
+- Open-source e gratuito, facile da estendere e personalizzare  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Come iniziare
+
+### Prerequisiti
+
+- Flutter SDK installato ([Guida Flutter](https://docs.flutter.dev/get-started/install))  
+- Python 3.x installato ([Download Python](https://www.python.org/downloads/))  
+- Le librerie Python richieste (vedi `requirements.txt`)
+
+### Installazione
+
+1. Clona il repository:  
+   ```bash
+   git clone https://github.com/tuo-username/flutter_translate_pdf.git
+   cd flutter_translate_pdf
