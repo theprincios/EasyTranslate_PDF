@@ -34,7 +34,6 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
 
-    // Aggiungi listener ai controller
     _pathController.addListener(_updateButtonState);
     _nameSavingController.addListener(_updateButtonState);
   }
@@ -99,7 +98,6 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ],
-                        // children: [TextField()],
                       ),
                       SizedBox(
                         height: 10,
@@ -320,7 +318,6 @@ class _HomePageState extends State<HomePage> {
       path = inputPdfPath;
     });
 
-    // await runTranslateScript(inputPdfPath);
   }
 
   Future<void> runTranslateScript(
@@ -346,12 +343,7 @@ class _HomePageState extends State<HomePage> {
         return;
       }
 
-      // // 3) Copia PDF di input dagli asset nella cartella temporanea
-      // final pdfData = await rootBundle.load('assets/python/libro_cam.pdf');
-      // final inputPdfFile = File('${tempDir.path}/libro_cam.pdf');
-      // await inputPdfFile.writeAsBytes(pdfData.buffer.asUint8List());
-
-      // 4) Controlla se il file è stato copiato correttamente
+   
       final inputPdfPath = inputPdfFile.path;
       final fileExists = await inputPdfFile.exists();
       print('File PDF di input esiste? $fileExists, path: $inputPdfPath');
@@ -376,10 +368,10 @@ class _HomePageState extends State<HomePage> {
           scriptFile.path,
           inputPdfPath,
           outputPdfPath,
-          inputLanguage, // 3° parametro: lingua originale
-          languageTarget, // 4° parametro: lingua traduzione
-          pages, // 5° parametro: pagine da tradurre
-          fontPath, // 6° parametro: font path
+          inputLanguage, 
+          languageTarget, 
+          pages,
+          fontPath, 
         ],
       );
 
@@ -394,7 +386,6 @@ class _HomePageState extends State<HomePage> {
           final totalPages = int.parse(parts[1]);
           setState(() {
             progress = currentPage / totalPages;
-            // progressText = 'Traduzione pagina $currentPage di $totalPages';
           });
         } else {
           print('PYTHON STDOUT: $line');

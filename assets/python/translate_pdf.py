@@ -15,7 +15,6 @@ def parse_pages(pages_str):
         print(f"Error parsing pages list: {e}. Use comma-separated integers like: 0,1,2", flush=True)
         return None
 
-# ... resto dello script rimane uguale ...
 
 def translate_pdf_simple(input_pdf, output_pdf, input_language="en", target_language="en", pages_to_translate=None, font_path=None):
     print(f"Opening PDF: {input_pdf}", flush=True)
@@ -57,7 +56,6 @@ def translate_pdf_simple(input_pdf, output_pdf, input_language="en", target_lang
         pdf_writer.add_page()
         pdf_writer.multi_cell(0, 10, translated_text)
 
-        # Stampa il progresso con questo formato per Flutter
         print(f"PAGE_PROGRESS {i}/{len(pages_to_translate)}", flush=True)
 
     print(f"Saving translated PDF to: {output_pdf}", flush=True)
